@@ -1,1 +1,5 @@
 /node_modules
+*.kubeconfig
+secret*.yaml
+*-secret.yaml
+.env
