@@ -13,6 +13,14 @@ app.get("/", (req, res) => {
     `);
 });
 
+app.post("/register", (req, res) => {
+    const firstName = req.query.firstName;
+    const lastName = req.query.lastName;
+    console.log(`Registering user: ${firstName} ${lastName}`);
+    // save data to postgress database
+    res.send("User registered successfully");
+});
+
 app.listen(PORT, () => {
     console.log(`Running on ${PORT}`);
 });
